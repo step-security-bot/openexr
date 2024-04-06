@@ -20,3 +20,8 @@ updates:
     schedule:
       day: "monday"
       interval: "weekly"
+
+  - package-ecosystem: pip
+    directory: /website
+    schedule:
+      interval: daily
