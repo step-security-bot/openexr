@@ -53,6 +53,11 @@ jobs:
       DOXYGEN_VERSION: 1.9.1
       
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: Checkout
         uses: actions/checkout@v3
       - name: Create build directory

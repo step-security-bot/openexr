@@ -36,6 +36,11 @@ jobs:
     steps:
       # TODO: Remove this workaround following resolution of:
       #       https://github.com/AcademySoftwareFoundation/aswf-docker/issues/43
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: Setup container
         run: sudo rm -rf /usr/local/lib64/cmake/glew
       - name: Checkout
@@ -106,6 +111,11 @@ jobs:
     steps:
       # TODO: Remove this workaround following resolution of:
       #       https://github.com/AcademySoftwareFoundation/aswf-docker/issues/43
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: Setup container
         run: sudo rm -rf /usr/local/lib64/cmake/glew
       - name: Checkout
@@ -185,6 +195,11 @@ jobs:
     steps:
       # TODO: Remove this workaround following resolution of:
       #       https://github.com/AcademySoftwareFoundation/aswf-docker/issues/43
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: Setup container
         run: sudo rm -rf /usr/local/lib64/cmake/glew
       - name: Checkout

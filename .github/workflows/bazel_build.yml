@@ -45,6 +45,11 @@ jobs:
     runs-on: ubuntu-22.04
     
     steps:
+    - name: Harden Runner
+      uses: step-security/harden-runner@v2
+      with:
+        egress-policy: audit
+
     - uses: actions/checkout@v4.1.1
 
     - name: Mount Bazel cache
@@ -63,6 +68,11 @@ jobs:
     runs-on: windows-2022
 
     steps:
+    - name: Harden Runner
+      uses: step-security/harden-runner@v2
+      with:
+        egress-policy: audit
+
     - uses: actions/checkout@v4.1.1
 
     - name: Mount Bazel cache
@@ -81,6 +91,11 @@ jobs:
     runs-on: macos-13
 
     steps:
+    - name: Harden Runner
+      uses: step-security/harden-runner@v2
+      with:
+        egress-policy: audit
+
     - uses: actions/checkout@v4.1.1
 
     - name: Mount Bazel cache
@@ -99,6 +114,11 @@ jobs:
     runs-on: macos-14
 
     steps:
+    - name: Harden Runner
+      uses: step-security/harden-runner@v2
+      with:
+        egress-policy: audit
+
     - uses: actions/checkout@v4.1.1
 
     - name: Mount Bazel cache

@@ -38,6 +38,11 @@ jobs:
        
     steps:
 
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: Set Prefix
         # The tag name begins with a 'v', e.g. "v3.2.4", but the prefix
         # should omit the 'v', so the tarball "openexr-3.2.4.tar.gz"
